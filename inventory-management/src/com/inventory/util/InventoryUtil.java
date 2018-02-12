@@ -7,9 +7,16 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import com.inventory.model.Item;
 
+/**
+ * @author srinivasan
+ *
+ */
 public class InventoryUtil {
 	
-	public static void printReport(List<Item> items, double profitFromPreviousReport){
+	/**
+	 * Generate Report
+	 */
+	public static void printReport(List<Item> items, double profitValue){
 		Collections.sort(items, (item1, item2)->{
         	return item1.getItemName().compareTo(item2.getItemName());
         });
@@ -29,7 +36,7 @@ public class InventoryUtil {
 	    System.out.println("--------------------------------------------------------------------------------------------");
 	    System.out.format("%-83s %-17s", "Total value", df.format(totalValue.get()));
 	    System.out.println();
-	    System.out.format("%-83s %-17s", "Profit since previous report", df.format(profitFromPreviousReport));
+	    System.out.format("%-83s %-17s", "Profit since previous report", df.format(profitValue));
 	    System.out.println();
 	}
 		

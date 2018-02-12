@@ -6,6 +6,10 @@ import com.inventory.model.Item;
 import com.inventory.services.InventoryService;
 import com.inventory.services.InventoryServiceImpl;
 
+/**
+ * Demo - Inventory Management
+ * @author srinivasan
+ */
 public class Main {
 
 	static String CMD_CREATE = "create";
@@ -18,7 +22,7 @@ public class Main {
 	private InventoryService inventoryService;
 	
 	Main(){
-		inventoryService = new InventoryServiceImpl();
+		this.inventoryService = new InventoryServiceImpl();
 	}
 	
 	public static void main(String[] args) {

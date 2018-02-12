@@ -1,5 +1,9 @@
 package com.inventory.model;
 
+/**
+ * @author srinivasan
+ *
+ */
 public class Item {
 	
 	private String itemName;
